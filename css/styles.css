@@ -21,12 +21,16 @@
   --main-background-color: #ffffff;
   --dark-background-color: #2f303a;
   --secondary-background-color: #f5f4fa;
-  --header-board-color: #ececec;
-  --border-color: #eeeeee;
+
   --footer-background-icon-color: rgba(255, 255, 255, 0.1);
   --background-color-overlay: rgba(33, 150, 243, 0.9);
   --background-thumb: rgba(47, 48, 58, 0.8);
   --backdrop-background-color: rgba(0, 0, 0, 0.2);
+
+  /* border color */
+  --header-board-color: #ececec;
+  --form-input-border: 1px solid rgba(33, 33, 33, 0.2);
+  --border-color: #eeeeee;
 
   /* shadow colors */
   --card-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
@@ -360,7 +364,7 @@ img {
   opacity: 1;
 
   width: 528px;
-  height: 581px;
+  min-height: 581px;
   padding: 40px;
 
   background-color: var(--main-background-color);
@@ -415,12 +419,15 @@ img {
   color: var(--title-color);
 }
 .form-field {
+  position: relative;
+
   display: flex;
   flex-direction: column;
 }
-.form-field:last-of-type {
+
+/* .form-field:last-of-type {
   margin-bottom: 50px;
-}
+} */
 
 .form-label {
   /* position: relative; */
@@ -436,22 +443,63 @@ img {
 
   color: var(--main-text-color);
 }
+.form-input-container {
+  position: relative;
 
+  color: var(--title-color);
+}
 .form-input {
-  /* position: relative; */
+  /* display: block; */
+
   width: 100%;
   height: 40px;
   margin-bottom: 10px;
-  border: 1px solid var(--form-text-color);
-  border-radius: 4px;
-  padding: 11px 12px;
-}
-.form-textarea {
-  padding: 12px 16px;
-  border: 1px solid var(--form-text-color);
-  border-radius: 4px;
+  border: var(--form-input-border);
 
+  border-radius: 4px;
+  padding: 12px 12px 12px 42px;
+
+  cursor: pointer;
+
+  outline-color: var(--accent-color);
+
+  /* outline-offset: var(--form-input-border); */
+}
+
+.form-input:focus,
+.form-input:hover,
+.form-textarea:focus,
+.form-textarea:hover {
+  border: 1px solid #2196f3;
+  /* border-color: red; */
+  outline: 0;
+}
+
+.form-input:focus + .form-icon,
+.form-input:hover + .form-icon {
+  color: var(--accent-color);
+}
+
+.form-icon {
+  position: absolute;
+  top: 0;
+  left: 15px;
+
+  fill: currentColor;
+}
+
+.form-textarea {
+  /* display: flex; */
+  width: 100%;
   height: 120px;
+
+  padding: 12px 16px;
+  margin-bottom: 20px;
+  border: 1px solid var(--form-text-color);
+  border-radius: 4px;
+  outline-color: var(--accent-color);
+
+  cursor: pointer;
 }
 
 .form-textarea::placeholder {
@@ -462,9 +510,7 @@ img {
 
   color: var(--placeholder-text-color);
 }
-.form-terms {
-  margin-bottom: 30px;
-}
+
 .form-label-terms {
   font-weight: 400;
   font-size: 14px;
@@ -472,6 +518,25 @@ img {
   letter-spacing: 0.03em;
 
   color: var(--main-text-color);
+}
+
+.form-terms-link {
+  color: var(--accent-color);
+  text-decoration: underline;
+}
+
+.form-terms-container {
+  position: relative;
+
+  color: var(--title-color);
+}
+
+.form-terms-icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  fill: currentColor;
 }
 
 .form-button {
@@ -483,15 +548,15 @@ img {
 
   width: 200px;
   height: 50px;
-  color: var(--secondary-text-color);
-  background-color: var(--accent-color);
-  box-shadow: var(--card-shadow);
-
+  margin-top: 30px;
   border: none;
   padding: 10px 0;
   border-radius: 4px;
-
   cursor: pointer;
+
+  color: var(--secondary-text-color);
+  background-color: var(--accent-color);
+  box-shadow: var(--box-shadow);
 
   transition: background-color;
   transition-duration: var(--transition-duration);
@@ -503,11 +568,12 @@ img {
   background-color: var(--button-hover-color);
 }
 
-.form-icon {
+/* .form-icon {
   position: absolute;
   left: 0;
   top: 12px;
-}
+} */
+
 /* #endregion */
 /*#region section features */
 .features.section .list {
@@ -1043,6 +1109,12 @@ img {
 
   color: var(--secondary-text-color);
 }
+/* Прибирає білу рамку навколо input */
+.footer-email-input:focus,
+.footer-email-input:hover {
+  outline: 0;
+}
+
 .footer-email-button {
   display: flex;
   align-items: center;
@@ -1071,6 +1143,7 @@ img {
 .footer-email-button:focus {
   background-color: var(--button-hover-color);
 }
+
 .footer-email-icon {
   fill: currentColor;
   margin-left: 10px;
