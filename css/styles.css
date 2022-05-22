@@ -418,21 +418,12 @@ img {
 
   color: var(--title-color);
 }
-.form-field {
+
+.form-label {
   position: relative;
 
   display: flex;
   flex-direction: column;
-}
-
-/* .form-field:last-of-type {
-  margin-bottom: 50px;
-} */
-
-.form-label {
-  /* position: relative; */
-
-  display: flex;
 
   font-weight: 400;
   font-size: 12px;
