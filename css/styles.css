@@ -521,22 +521,34 @@ img {
 }
 
 .form-terms-icon {
+  margin-right: 8px;
+  --color4: #ffffff;
+  --color5: #ffffff;
+}
+.form-input-terms:hover + .form-terms-icon {
+  --color3: #2196f3;
+}
+.form-input-terms:checked + .form-terms-icon {
+  --color3: #2196f3;
+  --color4: #2196f3;
+  --color5: #ffffff;
+}
+
+/* Перший варіант чекбокса з анімацією 
+.form-terms-icon555 {
   display: inline-block;
   width: 16px;
   height: 15px;
   margin-right: 8px;
   background-image: url(../images/icons/icon/checkbox.svg);
-
   transition: background-image var(--transition-duration) var(--transition-timing-function);
 }
-
-.form-input-terms:hover + .form-terms-icon {
+.form-input-terms:hover + .form-terms-icon555 {
   background-image: url(../images/icons/icon/checkbox-focus.svg);
 }
-
-.form-input-terms:checked + .form-terms-icon {
+.form-input-terms:checked + .form-terms-icon555 {
   background-image: url(../images/icons/icon/check.svg);
-}
+}  */
 
 .form-input-terms {
   position: absolute;
