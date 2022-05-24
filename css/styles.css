@@ -42,7 +42,7 @@
   --box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 
   /* animation */
-  --transition-duration: 250ms;
+  --transition-duration: 2500ms;
   --transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   --modal-button-border-close: 1px solid rgba(0, 0, 0, 0.1);
 }
@@ -525,13 +525,15 @@ img {
   margin-right: 8px;
   --color4: #ffffff;
   --color5: #ffffff;
+
+  transition: fill var(--transition-duration) var(--transition-timing-function);
 }
 .form-input-terms:hover + .form-terms-icon {
-  --color3: #2196f3;
+  fill: var(--color3, #2196f3);
 }
 .form-input-terms:checked + .form-terms-icon {
-  --color3: #2196f3;
   --color4: #2196f3;
+  --color5: #ffffff;
 }
 
 /* Перший варіант чекбокса з анімацією 
