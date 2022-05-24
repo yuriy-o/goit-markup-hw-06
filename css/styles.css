@@ -1138,11 +1138,15 @@ img {
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
 
+  cursor: pointer;
+  transition: border var(--transition-duration) var(--transition-timing-function);
+
   color: var(--secondary-text-color);
 }
 /* Прибирає білу рамку навколо input */
 .footer-email-input:focus,
 .footer-email-input:hover {
+  border-color: var(--accent-color);
   outline: 0;
 }
 
@@ -1165,6 +1169,8 @@ img {
   letter-spacing: 0.06em;
 
   color: var(--secondary-text-color);
+
+  cursor: pointer;
 
   transition: background-color;
   transition-duration: var(--transition-duration);
