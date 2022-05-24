@@ -58,9 +58,6 @@ body {
   color: var(--main-text-color);
   background-color: var(--main-background-color);
 }
-textarea {
-  resize: none;
-}
 
 /* #endregion */
 /*#region Глобальне скидання стилів тегів */
@@ -86,6 +83,10 @@ img {
   display: block;
   max-width: 100%;
   height: auto;
+}
+
+textarea {
+  resize: none;
 }
 
 /*#endregion*/
@@ -419,7 +420,6 @@ img {
 }
 
 .form-label {
-  position: relative;
   display: block;
   margin-bottom: 10px;
   text-align: left;
@@ -528,29 +528,15 @@ img {
 
   transition: fill var(--transition-duration) var(--transition-timing-function);
 }
-.form-input-terms:hover + .form-terms-icon {
+
+.form-input-terms:hover + .form-terms-icon,
+.form-input-terms:focus + .form-terms-icon {
   fill: var(--color3, #2196f3);
 }
 .form-input-terms:checked + .form-terms-icon {
   --color4: #2196f3;
   --color5: #ffffff;
 }
-
-/* Перший варіант чекбокса з анімацією 
-.form-terms-icon555 {
-  display: inline-block;
-  width: 16px;
-  height: 15px;
-  margin-right: 8px;
-  background-image: url(../images/icons/icon/checkbox.svg);
-  transition: background-image var(--transition-duration) var(--transition-timing-function);
-}
-.form-input-terms:hover + .form-terms-icon555 {
-  background-image: url(../images/icons/icon/checkbox-focus.svg);
-}
-.form-input-terms:checked + .form-terms-icon555 {
-  background-image: url(../images/icons/icon/check.svg);
-}  */
 
 .form-input-terms {
   position: absolute;
@@ -1141,9 +1127,7 @@ img {
 .footer-address-container {
   margin-right: 70px;
 }
-/* .footer-button {
-  margin-left: auto;
-} */
+
 .footer-form {
   display: flex;
   align-items: center;
