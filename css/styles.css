@@ -532,7 +532,6 @@ img {
 .form-input-terms:checked + .form-terms-icon {
   --color3: #2196f3;
   --color4: #2196f3;
-  --color5: #ffffff;
 }
 
 /* Перший варіант чекбокса з анімацією 
