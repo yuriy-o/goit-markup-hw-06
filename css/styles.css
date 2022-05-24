@@ -1011,6 +1011,13 @@ img {
   border-right: 1px solid var(--border-color);
   border-bottom: 1px solid var(--border-color);
 }
+.portfolio-text-flag {
+  display: flex;
+  align-items: center;
+}
+.portfolio-text.flag {
+  margin-right: 10px;
+}
 
 /* #endregion */
 /*#region ++ Portfolio CodePen Home Card slide flip */
@@ -1114,7 +1121,9 @@ img {
   transition-duration: var(--transition-duration);
   transition-timing-function: var(--transition-timing-function);
 }
-
+.footer-social-container {
+  margin-right: auto;
+}
 .footer-social-caption,
 .footer-email {
   display: block;
@@ -1132,9 +1141,9 @@ img {
 .footer-address-container {
   margin-right: 70px;
 }
-.footer-button {
+/* .footer-button {
   margin-left: auto;
-}
+} */
 .footer-form {
   display: flex;
   align-items: center;
