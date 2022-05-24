@@ -975,6 +975,16 @@ img {
   transform: translateY(0);
 }
 
+.card-thumb-pre {
+  font-family: var(--main-font);
+  font-size: 14px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.56;
+  letter-spacing: 0.03em;
+  margin-top: -10px;
+  margin-left: -120px;
+}
 .portfolio-second-title {
   margin-bottom: 4px;
 
